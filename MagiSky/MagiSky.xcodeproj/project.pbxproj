@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		FA3E60D720EC656100E76227 /* MagiSkyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3E60D620EC656100E76227 /* MagiSkyTests.swift */; };
 		FA3E60E220EC656100E76227 /* MagiSkyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3E60E120EC656100E76227 /* MagiSkyUITests.swift */; };
-		FA3E60FC20EC662500E76227 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA3E60F020EC662500E76227 /* Info.plist */; };
 		FA3E60FD20EC662500E76227 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3E60F220EC662500E76227 /* ViewController.swift */; };
 		FA3E60FE20EC662500E76227 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA3E60F420EC662500E76227 /* Assets.xcassets */; };
 		FA3E60FF20EC662500E76227 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3E60F620EC662500E76227 /* AppDelegate.swift */; };
@@ -274,7 +273,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA3E610120EC662500E76227 /* Main.storyboard in Resources */,
-				FA3E60FC20EC662500E76227 /* Info.plist in Resources */,
 				FA3E610020EC662500E76227 /* LaunchScreen.storyboard in Resources */,
 				FA3E610320EC67BD00E76227 /* Default-568h@2x.png in Resources */,
 				FA3E60FE20EC662500E76227 /* Assets.xcassets in Resources */,
