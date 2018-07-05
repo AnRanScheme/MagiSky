@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FA3E60D720EC656100E76227 /* MagiSkyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3E60D620EC656100E76227 /* MagiSkyTests.swift */; };
 		FA3E60E220EC656100E76227 /* MagiSkyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3E60E120EC656100E76227 /* MagiSkyUITests.swift */; };
 		FA3E60FD20EC662500E76227 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3E60F220EC662500E76227 /* ViewController.swift */; };
 		FA3E60FE20EC662500E76227 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA3E60F420EC662500E76227 /* Assets.xcassets */; };
@@ -15,6 +14,11 @@
 		FA3E610020EC662500E76227 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA3E60F820EC662500E76227 /* LaunchScreen.storyboard */; };
 		FA3E610120EC662500E76227 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA3E60FA20EC662500E76227 /* Main.storyboard */; };
 		FA3E610320EC67BD00E76227 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA3E610220EC67BD00E76227 /* Default-568h@2x.png */; };
+		FAACCCEC20EDA547001026CB /* Configurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAACCCEB20EDA547001026CB /* Configurations.swift */; };
+		FAACCCEF20EDA6E2001026CB /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAACCCEE20EDA6E2001026CB /* Location.swift */; };
+		FAACCCF120EDB13B001026CB /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAACCCF020EDB13B001026CB /* WeatherData.swift */; };
+		FAACCCF420EDB4E9001026CB /* WeatherDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAACCCF320EDB4E9001026CB /* WeatherDataManager.swift */; };
+		FAACCCF620EDBC0B001026CB /* WeatherDataManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAACCCF520EDBC0B001026CB /* WeatherDataManagerTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +41,6 @@
 /* Begin PBXFileReference section */
 		FA3E60BE20EC655F00E76227 /* MagiSky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagiSky.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA3E60D220EC656100E76227 /* MagiSkyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MagiSkyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA3E60D620EC656100E76227 /* MagiSkyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagiSkyTests.swift; sourceTree = "<group>"; };
 		FA3E60D820EC656100E76227 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA3E60DD20EC656100E76227 /* MagiSkyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MagiSkyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA3E60E120EC656100E76227 /* MagiSkyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagiSkyUITests.swift; sourceTree = "<group>"; };
@@ -49,6 +52,11 @@
 		FA3E60F920EC662500E76227 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA3E60FB20EC662500E76227 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA3E610220EC67BD00E76227 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		FAACCCEB20EDA547001026CB /* Configurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurations.swift; sourceTree = "<group>"; };
+		FAACCCEE20EDA6E2001026CB /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		FAACCCF020EDB13B001026CB /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
+		FAACCCF320EDB4E9001026CB /* WeatherDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataManager.swift; sourceTree = "<group>"; };
+		FAACCCF520EDBC0B001026CB /* WeatherDataManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataManagerTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +108,9 @@
 		FA3E60C020EC655F00E76227 /* MagiSky */ = {
 			isa = PBXGroup;
 			children = (
+				FAACCCF220EDB4C2001026CB /* Manager */,
+				FAACCCED20EDA6CF001026CB /* Models */,
+				FAACCCEA20EDA511001026CB /* Configurations */,
 				FA3E60F520EC662500E76227 /* Delegates */,
 				FA3E60F120EC662500E76227 /* ViewControllers */,
 				FA3E60F720EC662500E76227 /* Storyboards */,
@@ -112,8 +123,8 @@
 		FA3E60D520EC656100E76227 /* MagiSkyTests */ = {
 			isa = PBXGroup;
 			children = (
-				FA3E60D620EC656100E76227 /* MagiSkyTests.swift */,
 				FA3E60D820EC656100E76227 /* Info.plist */,
+				FAACCCF520EDBC0B001026CB /* WeatherDataManagerTest.swift */,
 			);
 			path = MagiSkyTests;
 			sourceTree = "<group>";
@@ -166,6 +177,31 @@
 				FA3E60FA20EC662500E76227 /* Main.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		FAACCCEA20EDA511001026CB /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				FAACCCEB20EDA547001026CB /* Configurations.swift */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		FAACCCED20EDA6CF001026CB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FAACCCEE20EDA6E2001026CB /* Location.swift */,
+				FAACCCF020EDB13B001026CB /* WeatherData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FAACCCF220EDB4C2001026CB /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				FAACCCF320EDB4E9001026CB /* WeatherDataManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +275,7 @@
 					};
 					FA3E60D120EC656100E76227 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 						TestTargetID = FA3E60BD20EC655F00E76227;
 					};
 					FA3E60DC20EC656100E76227 = {
@@ -300,8 +337,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAACCCF420EDB4E9001026CB /* WeatherDataManager.swift in Sources */,
 				FA3E60FF20EC662500E76227 /* AppDelegate.swift in Sources */,
+				FAACCCF120EDB13B001026CB /* WeatherData.swift in Sources */,
 				FA3E60FD20EC662500E76227 /* ViewController.swift in Sources */,
+				FAACCCEF20EDA6E2001026CB /* Location.swift in Sources */,
+				FAACCCEC20EDA547001026CB /* Configurations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,7 +350,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA3E60D720EC656100E76227 /* MagiSkyTests.swift in Sources */,
+				FAACCCF620EDBC0B001026CB /* WeatherDataManagerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +552,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MagiSkyTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -520,6 +562,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.anran.MagiSkyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MagiSky.app/MagiSky";
@@ -531,6 +574,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MagiSkyTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
