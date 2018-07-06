@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FA3E60E220EC656100E76227 /* MagiSkyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3E60E120EC656100E76227 /* MagiSkyUITests.swift */; };
-		FA3E60FD20EC662500E76227 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3E60F220EC662500E76227 /* ViewController.swift */; };
+		FA3E60FD20EC662500E76227 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3E60F220EC662500E76227 /* RootViewController.swift */; };
 		FA3E60FE20EC662500E76227 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA3E60F420EC662500E76227 /* Assets.xcassets */; };
 		FA3E60FF20EC662500E76227 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3E60F620EC662500E76227 /* AppDelegate.swift */; };
 		FA3E610020EC662500E76227 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA3E60F820EC662500E76227 /* LaunchScreen.storyboard */; };
@@ -25,6 +25,9 @@
 		FACC1E6920EF11DB00D65EFC /* Extension+URLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC1E6820EF11DB00D65EFC /* Extension+URLSessionDataTask.swift */; };
 		FACC1E6B20EF15A000D65EFC /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC1E6A20EF15A000D65EFC /* MockURLSession.swift */; };
 		FACC1E6D20EF15AD00D65EFC /* MockURLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC1E6C20EF15AD00D65EFC /* MockURLSessionDataTask.swift */; };
+		FACC1E7020EF2D3800D65EFC /* WeartherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC1E6F20EF2D3800D65EFC /* WeartherViewController.swift */; };
+		FACC1E7220EF2DED00D65EFC /* CurrentWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC1E7120EF2DED00D65EFC /* CurrentWeatherViewController.swift */; };
+		FACC1E7420EF306F00D65EFC /* Extension+Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC1E7320EF306F00D65EFC /* Extension+Double.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +55,7 @@
 		FA3E60E120EC656100E76227 /* MagiSkyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagiSkyUITests.swift; sourceTree = "<group>"; };
 		FA3E60E320EC656100E76227 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA3E60F020EC662500E76227 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FA3E60F220EC662500E76227 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FA3E60F220EC662500E76227 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		FA3E60F420EC662500E76227 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA3E60F620EC662500E76227 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA3E60F920EC662500E76227 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -69,6 +72,9 @@
 		FACC1E6820EF11DB00D65EFC /* Extension+URLSessionDataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+URLSessionDataTask.swift"; sourceTree = "<group>"; };
 		FACC1E6A20EF15A000D65EFC /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
 		FACC1E6C20EF15AD00D65EFC /* MockURLSessionDataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSessionDataTask.swift; sourceTree = "<group>"; };
+		FACC1E6F20EF2D3800D65EFC /* WeartherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeartherViewController.swift; sourceTree = "<group>"; };
+		FACC1E7120EF2DED00D65EFC /* CurrentWeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherViewController.swift; sourceTree = "<group>"; };
+		FACC1E7320EF306F00D65EFC /* Extension+Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Double.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,7 +171,8 @@
 		FA3E60F120EC662500E76227 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				FA3E60F220EC662500E76227 /* ViewController.swift */,
+				FACC1E7520EF33A100D65EFC /* RootViewController */,
+				FACC1E6E20EF2D0F00D65EFC /* WeartherViewControllers */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -234,8 +241,26 @@
 			children = (
 				FACC1E6620EF118D00D65EFC /* Extension+URLSession.swift */,
 				FACC1E6820EF11DB00D65EFC /* Extension+URLSessionDataTask.swift */,
+				FACC1E7320EF306F00D65EFC /* Extension+Double.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FACC1E6E20EF2D0F00D65EFC /* WeartherViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FACC1E6F20EF2D3800D65EFC /* WeartherViewController.swift */,
+				FACC1E7120EF2DED00D65EFC /* CurrentWeatherViewController.swift */,
+			);
+			path = WeartherViewControllers;
+			sourceTree = "<group>";
+		};
+		FACC1E7520EF33A100D65EFC /* RootViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FA3E60F220EC662500E76227 /* RootViewController.swift */,
+			);
+			path = RootViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -372,11 +397,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAACCCF420EDB4E9001026CB /* WeatherDataManager.swift in Sources */,
+				FACC1E7020EF2D3800D65EFC /* WeartherViewController.swift in Sources */,
+				FACC1E7220EF2DED00D65EFC /* CurrentWeatherViewController.swift in Sources */,
 				FA3E60FF20EC662500E76227 /* AppDelegate.swift in Sources */,
+				FACC1E7420EF306F00D65EFC /* Extension+Double.swift in Sources */,
 				FACC1E6420EF110800D65EFC /* URLSessionDataTaskProtocol.swift in Sources */,
 				FACC1E6220EF092A00D65EFC /* URLSesstionProtocol.swift in Sources */,
 				FAACCCF120EDB13B001026CB /* WeatherData.swift in Sources */,
-				FA3E60FD20EC662500E76227 /* ViewController.swift in Sources */,
+				FA3E60FD20EC662500E76227 /* RootViewController.swift in Sources */,
 				FACC1E6720EF118D00D65EFC /* Extension+URLSession.swift in Sources */,
 				FACC1E6920EF11DB00D65EFC /* Extension+URLSessionDataTask.swift in Sources */,
 				FAACCCEF20EDA6E2001026CB /* Location.swift in Sources */,
