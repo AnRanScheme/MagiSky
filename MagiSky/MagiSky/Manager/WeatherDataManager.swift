@@ -29,7 +29,7 @@ final class WeatherDataManager {
     
     typealias CompletionHandler = (WeatherData?, DataManagerError?)->Void
     
-    func WeatherDataAt(latitude: Double, longitude: Double, completion: @escaping CompletionHandler)  {
+    func weatherDataAt(latitude: Double, longitude: Double, completion: @escaping CompletionHandler)  {
         let url = baseUrl.appendingPathComponent("\(latitude),\(longitude)")
         
         var request = URLRequest(url: url)
@@ -38,17 +38,16 @@ final class WeatherDataManager {
         
         self.urlSession.dataTask(with: request) {
             (data, response, error) in
-            DispatchQueue.main.async {
-                self.didFinishGettingWeatherData(data: data,
-                                                 response: response,
-                                                 error: error,
-                                                 completion: completion)
-            }
-        }.resume()
+            self.didFinishGettingWeatherData(data: data,
+                                             response: response,
+                                             error: error,
+                                             completion: completion)
+            
+            }.resume()
         
     }
     
-    func didFinishGettingWeatherData(data: Data?, response: URLResponse?, error: Error?, completion: CompletionHandler) {
+    private func didFinishGettingWeatherData(data: Data?, response: URLResponse?, error: Error?, completion: CompletionHandler) {
         if let _ = error {
             completion(nil, .failedRequest)
         }
@@ -56,7 +55,9 @@ final class WeatherDataManager {
         else if let data = data, let response = response as? HTTPURLResponse {
             if response.statusCode == 200 {
                 do {
-                    let weatherData = try JSONDecoder().decode(WeatherData.self, from: data)
+                    let decoder = JSONDecoder()
+                    decoder.dateDecodingStrategy = .secondsSince1970
+                    let weatherData = try decoder.decode(WeatherData.self, from: data)
                     completion(weatherData, nil)
                 }
                 
