@@ -14,6 +14,61 @@ enum DataManagerError: Error {
     case unknow
 }
 
+internal class DarkSkyURLSession: URLSessionProtocol {
+    func dataTask(
+        with request: URLRequest,
+        completionHandler: @escaping URLSessionProtocol.DataTaskHandler)
+        -> URLSessionDataTaskProtocol {
+            return DarkSkyURLSessionDataTask(
+                request: request,
+                completion: completionHandler)
+    }
+}
+
+internal class DarkSkyURLSessionDataTask: URLSessionDataTaskProtocol {
+    private let request: URLRequest
+    private let completion: URLSessionProtocol.DataTaskHandler
+    
+    init(request: URLRequest, completion: @escaping URLSessionProtocol.DataTaskHandler) {
+        self.request = request
+        self.completion = completion
+    }
+
+    // 调用这个方法等于是调用网络请求
+    func resume() {
+        // 添加测试环境的数据配置
+        let json = ProcessInfo
+            .processInfo
+            .environment["FakeJSON"]
+
+        if let json = json {
+            let response = HTTPURLResponse(
+                url: request.url!,
+                statusCode: 200,
+                httpVersion: nil,
+                headerFields: nil)
+            let data = json.data(using: .utf8)!
+
+            completion(data, response, nil)
+        }
+    }
+}
+
+internal struct Config {
+    private static func isUITesting() -> Bool {
+        return ProcessInfo.processInfo.arguments.contains("UI-TESTING")
+    }
+    
+    static var urlSession: URLSessionProtocol = {
+        if isUITesting() {
+            return DarkSkyURLSession()
+        }
+        else {
+            return URLSession.shared
+        }
+    }()
+}
+
 final class WeatherDataManager {
     
     internal let baseUrl: URL
@@ -25,7 +80,8 @@ final class WeatherDataManager {
         self.urlSession = urlSession
     }
     
-    static let shared = WeatherDataManager(API.authenticatedUrl, urlSession: URLSession.shared)
+    static let shared = WeatherDataManager(API.authenticatedUrl,
+                                           urlSession: Config.urlSession)
     
     typealias CompletionHandler = (WeatherData?, DataManagerError?)->Void
     

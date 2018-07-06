@@ -11,13 +11,30 @@ import XCTest
 class CurrentWeatherUITests: XCTestCase {
     
     let app = XCUIApplication()
-        
+    
     override func setUp() {
         super.setUp()
         // 测试失败之后会不会继续执行
         continueAfterFailure = false
+        app.launchArguments += ["UI-TESTING"]
+        
+        let json = """
+               {
+                   "longitude" : 100,
+                   "latitude" : 52,
+                   "currently" : {
+                       "temperature" : 23,
+                       "humidity" : 0.91,
+                       "icon" : "snow",
+                       "time" : 1507180335,
+                       "summary" : "Light Snow"
+                   }
+               }
+               """
+        app.launchEnvironment["FakeJSON"] = json
+        // 这两个属性的设置，必须要在调用app.launch()方法之前
         app.launch()
-
+        
     }
     
     override func tearDown() {
@@ -25,6 +42,7 @@ class CurrentWeatherUITests: XCTestCase {
     }
     
     /// UI单元测试与网络相关太严重,失败了好几次
+    /*
     func test_location_button_exists() {
         
         let locationBtn = app.buttons["LocationBtn"]
@@ -43,6 +61,20 @@ class CurrentWeatherUITests: XCTestCase {
         XCTAssert(locationBtn.exists)
         
     }
+ */
+    
+    /// 偶然性的失败 原因 位置,后面进行测试的时候好了
+    func test_set_button_exists_net() {
+        let setBtn = app.buttons["Setting"]
+        XCTAssert(setBtn.exists)
+    }
+    
+    func test_currently_weather_display() {
+        XCTAssert(app.images["snow"].exists)
+        XCTAssert(app.staticTexts["Light Snow"].exists)
+    }
+    
+    
 
     
 }
