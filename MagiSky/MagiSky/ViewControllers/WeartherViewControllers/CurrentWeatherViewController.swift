@@ -36,7 +36,7 @@ class CurrentWeatherViewController: WeartherViewController {
         delegate?.settingsButtonPressed(controller: self)
     }
     
-    var now: WeatherData? {
+    var viewModel: CurrentWeatherViewModel? {
         didSet {
             DispatchQueue.main.async {
                 self.updateView()
@@ -44,60 +44,38 @@ class CurrentWeatherViewController: WeartherViewController {
         }
     }
     
-    var location: Location? {
-        didSet {
-            DispatchQueue.main.async {
-                self.updateView()
-            }
-        }
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
     
     func updateView() {
         activityIndicatorView.stopAnimating()
         
-        if let now = now, let location = location {
-            updateWeatherContainer(with: now, at: location)
+        if let vm = viewModel, vm.isUpdateReady {
+            updateWeatherContainer(with: vm)
         }
         else {
             loadingFailedLabel.isHidden = false
             loadingFailedLabel.text =
-            "Cannot load fetch weather/location data from the network."
+            "Load weather/location failed."
         }
     }
     
     func updateWeatherContainer(
-        with data: WeatherData, at location: Location) {
+        with vm: CurrentWeatherViewModel) {
         weatherContainerView.isHidden = false
-        
         // 1. 设置地点
-        locationLabel.text = location.name
-        
+        locationLabel.text = vm.city
         // 2. 转换为摄氏度
-        temperatureLabel.text = String(
-            format: "%.1f °C",
-            data.currently.temperature.toCelcius())
-        
+        temperatureLabel.text = vm.temperature
         // 3. 设置天气图片
-        weatherIcon.image = weatherIcon(
-            of: data.currently.icon)
-        
+        weatherIcon.image = vm.weatherIcon
         // 4. 湿度格式设置
-        humidityLabel.text = String(
-            format: "%.1f",
-            data.currently.humidity)
-        
+        humidityLabel.text = vm.humidity
         // 5. 天气
-        summaryLabel.text = data.currently.summary
-        
+        summaryLabel.text = vm.summary
         // 6. 日期
-        let formatter = DateFormatter()
-        formatter.dateFormat = "E, dd MMMM"
-        dateLabel.text = formatter.string(
-            from: data.currently.time)
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
+        dateLabel.text = vm.date
     }
 
 }

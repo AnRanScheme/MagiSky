@@ -39,6 +39,8 @@ class RootViewController: UIViewController {
                 fatalError("Invalid destination view controller!")
             }
             destination.delegate = self
+            // 如果这里不对ViewModel进行赋值的话, ViewModel会一直为nil
+            destination.viewModel = CurrentWeatherViewModel()
             currentWeatherViewController = destination
         default:
             break
@@ -78,7 +80,7 @@ class RootViewController: UIViewController {
             if let error = error {
                 dump(error)
             } else if let city = placemarks?.first?.locality {
-                self.currentWeatherViewController.location = Location(
+                self.currentWeatherViewController.viewModel?.location = Location(
                     name: city,
                     latitude: currentLocation.coordinate.latitude,
                     longitude: currentLocation.coordinate.longitude)
@@ -99,7 +101,7 @@ class RootViewController: UIViewController {
                 dump(error)
             }
             else if let response = response {
-                self.currentWeatherViewController.now = response
+                self.currentWeatherViewController.viewModel?.weather = response
             }
         }
     }

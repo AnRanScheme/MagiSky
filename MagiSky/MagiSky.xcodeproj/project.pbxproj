@@ -28,6 +28,8 @@
 		FACC1E7020EF2D3800D65EFC /* WeartherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC1E6F20EF2D3800D65EFC /* WeartherViewController.swift */; };
 		FACC1E7220EF2DED00D65EFC /* CurrentWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC1E7120EF2DED00D65EFC /* CurrentWeatherViewController.swift */; };
 		FACC1E7420EF306F00D65EFC /* Extension+Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC1E7320EF306F00D65EFC /* Extension+Double.swift */; };
+		FACC1E7720EF45B500D65EFC /* CurrentWeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC1E7620EF45B500D65EFC /* CurrentWeatherViewModel.swift */; };
+		FACC1E7920EF460E00D65EFC /* Extension+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC1E7820EF460E00D65EFC /* Extension+UIImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		FACC1E6F20EF2D3800D65EFC /* WeartherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeartherViewController.swift; sourceTree = "<group>"; };
 		FACC1E7120EF2DED00D65EFC /* CurrentWeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherViewController.swift; sourceTree = "<group>"; };
 		FACC1E7320EF306F00D65EFC /* Extension+Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Double.swift"; sourceTree = "<group>"; };
+		FACC1E7620EF45B500D65EFC /* CurrentWeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherViewModel.swift; sourceTree = "<group>"; };
+		FACC1E7820EF460E00D65EFC /* Extension+UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIImage.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +246,7 @@
 				FACC1E6620EF118D00D65EFC /* Extension+URLSession.swift */,
 				FACC1E6820EF11DB00D65EFC /* Extension+URLSessionDataTask.swift */,
 				FACC1E7320EF306F00D65EFC /* Extension+Double.swift */,
+				FACC1E7820EF460E00D65EFC /* Extension+UIImage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -250,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				FACC1E6F20EF2D3800D65EFC /* WeartherViewController.swift */,
+				FACC1E7620EF45B500D65EFC /* CurrentWeatherViewModel.swift */,
 				FACC1E7120EF2DED00D65EFC /* CurrentWeatherViewController.swift */,
 			);
 			path = WeartherViewControllers;
@@ -402,6 +408,8 @@
 				FA3E60FF20EC662500E76227 /* AppDelegate.swift in Sources */,
 				FACC1E7420EF306F00D65EFC /* Extension+Double.swift in Sources */,
 				FACC1E6420EF110800D65EFC /* URLSessionDataTaskProtocol.swift in Sources */,
+				FACC1E7920EF460E00D65EFC /* Extension+UIImage.swift in Sources */,
+				FACC1E7720EF45B500D65EFC /* CurrentWeatherViewModel.swift in Sources */,
 				FACC1E6220EF092A00D65EFC /* URLSesstionProtocol.swift in Sources */,
 				FAACCCF120EDB13B001026CB /* WeatherData.swift in Sources */,
 				FA3E60FD20EC662500E76227 /* RootViewController.swift in Sources */,
