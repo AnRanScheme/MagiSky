@@ -40,6 +40,13 @@ class WeatherDataManagerTest: XCTestCase {
     }
     
     /// 网络获取数据为异步
+    /*
+     首先，测试结果仍旧取决于网络状况，因此我们很难保证多次测试结果的一致性；
+     其次，当我们要测试一个REST服务的时候，
+     如果每个URL的测试都基于实际网络访问和超时的机制，将会显著增加测试执行的时间；
+     为此，我们需要需要第二种方法：
+     把从网络获取到数据的部分mock出来，并且，让异步执行的代码同步执行，这样才可以精确管理测试用例的执行过程。
+     */
     func test_weatherDataAt_getData() {
         var data: WeatherData?
         /// 其中的一种解决方法 期望
