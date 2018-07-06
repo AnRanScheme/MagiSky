@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FA3E60E220EC656100E76227 /* MagiSkyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3E60E120EC656100E76227 /* MagiSkyUITests.swift */; };
 		FA3E60FD20EC662500E76227 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3E60F220EC662500E76227 /* RootViewController.swift */; };
 		FA3E60FE20EC662500E76227 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA3E60F420EC662500E76227 /* Assets.xcassets */; };
 		FA3E60FF20EC662500E76227 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3E60F620EC662500E76227 /* AppDelegate.swift */; };
@@ -30,6 +29,7 @@
 		FACC1E7420EF306F00D65EFC /* Extension+Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC1E7320EF306F00D65EFC /* Extension+Double.swift */; };
 		FACC1E7720EF45B500D65EFC /* CurrentWeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC1E7620EF45B500D65EFC /* CurrentWeatherViewModel.swift */; };
 		FACC1E7920EF460E00D65EFC /* Extension+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC1E7820EF460E00D65EFC /* Extension+UIImage.swift */; };
+		FACC1E7B20EF573C00D65EFC /* CurrentWeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC1E7A20EF573C00D65EFC /* CurrentWeatherUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +54,6 @@
 		FA3E60D220EC656100E76227 /* MagiSkyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MagiSkyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA3E60D820EC656100E76227 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA3E60DD20EC656100E76227 /* MagiSkyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MagiSkyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA3E60E120EC656100E76227 /* MagiSkyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagiSkyUITests.swift; sourceTree = "<group>"; };
 		FA3E60E320EC656100E76227 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA3E60F020EC662500E76227 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA3E60F220EC662500E76227 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +78,7 @@
 		FACC1E7320EF306F00D65EFC /* Extension+Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Double.swift"; sourceTree = "<group>"; };
 		FACC1E7620EF45B500D65EFC /* CurrentWeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherViewModel.swift; sourceTree = "<group>"; };
 		FACC1E7820EF460E00D65EFC /* Extension+UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIImage.swift"; sourceTree = "<group>"; };
+		FACC1E7A20EF573C00D65EFC /* CurrentWeatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherUITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,7 +158,7 @@
 		FA3E60E020EC656100E76227 /* MagiSkyUITests */ = {
 			isa = PBXGroup;
 			children = (
-				FA3E60E120EC656100E76227 /* MagiSkyUITests.swift */,
+				FACC1E7A20EF573C00D65EFC /* CurrentWeatherUITests.swift */,
 				FA3E60E320EC656100E76227 /* Info.plist */,
 			);
 			path = MagiSkyUITests;
@@ -434,7 +434,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA3E60E220EC656100E76227 /* MagiSkyUITests.swift in Sources */,
+				FACC1E7B20EF573C00D65EFC /* CurrentWeatherUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -630,6 +630,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TDBLA72SEX;
 				INFOPLIST_FILE = MagiSkyTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -652,6 +653,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TDBLA72SEX;
 				INFOPLIST_FILE = MagiSkyTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -671,6 +673,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TDBLA72SEX;
 				INFOPLIST_FILE = MagiSkyUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -690,6 +693,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TDBLA72SEX;
 				INFOPLIST_FILE = MagiSkyUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
