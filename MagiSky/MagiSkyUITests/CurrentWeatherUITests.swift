@@ -62,7 +62,7 @@ class CurrentWeatherUITests: XCTestCase {
         
     }
  */
-    
+
     /// 偶然性的失败 原因 位置,后面进行测试的时候好了
     /// 验证可能与上面注释掉的方法有关
     func test_set_button_exists_net() {
