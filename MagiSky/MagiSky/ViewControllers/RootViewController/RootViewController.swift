@@ -12,8 +12,10 @@ import CoreLocation
 class RootViewController: UIViewController {
     
     var currentWeatherViewController: CurrentWeatherViewController!
+    var weekWeatherViewController: WeekWeatherViewController!
     
     private let segueCurrentWeather = "SegueCurrentWeather"
+    private let segueWeekWeather = "SegueWeekWeather"
     
     private lazy var locationManager: CLLocationManager = {
         let manager = CLLocationManager()
@@ -42,6 +44,11 @@ class RootViewController: UIViewController {
             // 如果这里不对ViewModel进行赋值的话, ViewModel会一直为nil
             destination.viewModel = CurrentWeatherViewModel()
             currentWeatherViewController = destination
+        case segueWeekWeather:
+            guard let destination = segue.destination as? WeekWeatherViewController else {
+                fatalError("Invalid destination view controller!")
+            }
+            weekWeatherViewController = destination
         default:
             break
         }
@@ -102,6 +109,8 @@ class RootViewController: UIViewController {
             }
             else if let response = response {
                 self.currentWeatherViewController.viewModel?.weather = response
+                self.weekWeatherViewController.viewModel =
+                    WeekWeatherViewModel(weatherData: response.daily.data)
             }
         }
     }

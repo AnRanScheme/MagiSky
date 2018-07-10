@@ -19,18 +19,29 @@ class CurrentWeatherUITests: XCTestCase {
         app.launchArguments += ["UI-TESTING"]
         
         let json = """
-               {
-                   "longitude" : 100,
-                   "latitude" : 52,
-                   "currently" : {
-                       "temperature" : 23,
-                       "humidity" : 0.91,
-                       "icon" : "snow",
-                       "time" : 1507180335,
-                       "summary" : "Light Snow"
-                   }
-               }
-               """
+    {
+        "longitude" : 100,
+        "latitude" : 52,
+        "currently" : {
+            "temperature" : 23,
+            "humidity" : 0.91,
+            "icon" : "snow",
+            "time" : 1507180335,
+            "summary" : "Light Snow"
+        },
+        "daily": {
+            "data": [
+                {
+                    "time": 1507180335,
+                    "icon": "clear-day",
+                    "temperatureLow": 66,
+                    "temperatureHigh": 82,
+                    "humidity": 0.25
+                }
+            ]
+        }
+    }
+    """
         app.launchEnvironment["FakeJSON"] = json
         // 这两个属性的设置，必须要在调用app.launch()方法之前
         app.launch()
