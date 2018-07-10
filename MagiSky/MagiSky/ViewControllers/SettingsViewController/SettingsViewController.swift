@@ -80,26 +80,23 @@ extension SettingsViewController {
         
         switch section {
         case .date:
-            cell.label.text = (indexPath.row == 0) ?
-                "Fri, 01 December" : "F, 12/01"
-            let timeMode = UserDefaults.dateMode()
+            guard let dateMode = DateMode(rawValue: indexPath.row) else {
+                fatalError("Invalide IndexPath")
+            }
             
-            if indexPath.row == timeMode.rawValue {
-                cell.accessoryType = .checkmark
-            }
-            else {
-                cell.accessoryType = .none
-            }
+            let vm = SettingsDateViewModel(dateMode: dateMode)
+            cell.accessoryType = vm.accessory
+            cell.label.text = vm.labelText
         case .temperature:
-            cell.label.text = (indexPath.row == 0) ?
-                "Celcius" : "Fahrenheit"
-            let temperatureNotation = UserDefaults.temperatureMode()
-            
-            if indexPath.row == temperatureNotation.rawValue {
-                cell.accessoryType = .checkmark
-            } else {
-                cell.accessoryType = .none
+            guard let temperatureMode = TemperatureMode(
+                rawValue: indexPath.row) else {
+                    fatalError("Invalid IndexPath")
             }
+            
+            let vm = SettingsTemperatureViewModel(
+                temperatureMode: temperatureMode)
+            cell.accessoryType = vm.accessory
+            cell.label.text = vm.labelText
         }
         
         return cell
