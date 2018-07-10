@@ -16,6 +16,7 @@ class RootViewController: UIViewController {
     
     private let segueCurrentWeather = "SegueCurrentWeather"
     private let segueWeekWeather = "SegueWeekWeather"
+    private let segueSettings = "SegueSettings"
     
     private lazy var locationManager: CLLocationManager = {
         let manager = CLLocationManager()
@@ -30,6 +31,10 @@ class RootViewController: UIViewController {
             fetchCity()
             fetchWeather()
         }
+    }
+    
+    @IBAction func unwindToRootViewController(
+        segue: UIStoryboardSegue) {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -49,6 +54,19 @@ class RootViewController: UIViewController {
                 fatalError("Invalid destination view controller!")
             }
             weekWeatherViewController = destination
+        case segueSettings:
+            guard let navigationController =
+                segue.destination as? UINavigationController else {
+                    fatalError("Invalid destination view controller!")
+            }
+            
+            guard let destination =
+                navigationController.topViewController as?
+                SettingsViewController else {
+                    fatalError("Invalid destination view controller!")
+            }
+            
+            destination.delegate = self
         default:
             break
         }
@@ -154,7 +172,25 @@ extension RootViewController: CurrentWeatherViewControllerDelegate {
     
     func settingsButtonPressed(controller: CurrentWeatherViewController) {
         print("Open Settings")
+        performSegue(withIdentifier: segueSettings, sender: self)
     }
     
+}
+
+extension RootViewController: SettingsViewControllerDelegate {
+    private func reloadUI() {
+        currentWeatherViewController.updateView()
+        weekWeatherViewController.updateView()
+    }
+    
+    func controllerDidChangeTimeMode(
+        controller: SettingsViewController) {
+        reloadUI()
+    }
+    
+    func controllerDidChangeTemperatureMode(
+        controller: SettingsViewController) {
+        reloadUI()
+    }
 }
 
