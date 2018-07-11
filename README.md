@@ -12,9 +12,9 @@
 ## 整理项目目录
 
 首先，还是创建一个*Single View Application*，这不过这次，记得把*Include Unit Tests*和*Include UI Tests*选上，在稍后的内容里，我们会涉及到单元测试以及UI测试的内容.
-![这是列子](https://github.com/AnRanScheme/MagiSky/raw/master/MagiSky/Gif-Pic/屏幕快照 2018-07-11 下午5.12.35.png)
+![这是列子](https://github.com/AnRanScheme/MagiSky/raw/master/Gif-Pic/屏幕快照 2018-07-11 下午5.12.35.png)
 以上是项目的架构
-![Untitled.gif](https://github.com/AnRanScheme/MagiSky/raw/master/MagiSky/Gif-Pic/Untitled.gif)
+![Untitled.gif](https://github.com/AnRanScheme/MagiSky/raw/master/Gif-Pic/Untitled.gif)
 
 这是项目运行的git
 
