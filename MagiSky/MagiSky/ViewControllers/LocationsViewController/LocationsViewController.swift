@@ -34,10 +34,8 @@ class LocationsViewController: UITableViewController {
     
 }
 
-
+// MARK: - Table view data source
 extension LocationsViewController {
-    
-    // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return Section.count
