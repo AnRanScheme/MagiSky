@@ -29,7 +29,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wLf-ES-ThC">
                                 <rect key="frame" x="0.0" y="286" width="375" height="381"/>
                                 <connections>
-                                    <segue destination="DMz-uJ-oLI" kind="presentation" identifier="SegueLocations" id="mQv-ay-hb5"/>
+                                    <segue destination="J3O-IF-ff3" kind="embed" identifier="SegueWeekWeather" id="4Do-47-vbA"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -48,6 +48,7 @@
                     </view>
                     <connections>
                         <segue destination="PU1-85-LGT" kind="presentation" identifier="SegueSettings" id="j5W-qz-EEo"/>
+                        <segue destination="DMz-uJ-oLI" kind="presentation" identifier="SegueLocations" id="JBd-Ku-Sxc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -182,30 +183,30 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aay-Aq-cRt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1009" y="-810"/>
+            <point key="canvasLocation" x="1009" y="-551"/>
         </scene>
         <!--Week Weather View Controller-->
         <scene sceneID="SW2-Rv-mGu">
             <objects>
                 <viewController id="J3O-IF-ff3" customClass="WeekWeatherViewController" customModule="MagiSky" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z58-j8-HV8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="381"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1HZ-Pl-n0V">
-                                <rect key="frame" x="8" y="323" width="359" height="21"/>
+                                <rect key="frame" x="8" y="180" width="359" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="dL6-YO-q1g">
-                                <rect key="frame" x="177" y="323.5" width="20" height="20"/>
+                                <rect key="frame" x="177" y="180.5" width="20" height="20"/>
                             </activityIndicatorView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O9D-Oa-KIC">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="381"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PEt-72-xeX">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="381"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WeekWeatherCell" rowHeight="104" id="9mg-vU-Jcr" customClass="WeekWeatherTableViewCell" customModule="MagiSky" customModuleProvider="target">
@@ -313,7 +314,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nzV-wK-1yS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1814" y="-623"/>
+            <point key="canvasLocation" x="1814" y="-493"/>
         </scene>
         <!--Setting-->
         <scene sceneID="aqB-51-4Cp">
@@ -376,10 +377,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LocationsCell" id="kJ1-vJ-WX7">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LocationCell" id="kJ1-vJ-WX7" customClass="LocationTableViewCell" customModule="MagiSky" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kJ1-vJ-WX7" id="5g2-Hg-XTe" customClass="LocationTableViewCell" customModule="MagiSky" customModuleProvider="target">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kJ1-vJ-WX7" id="5g2-Hg-XTe">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -395,10 +396,10 @@
                                         <constraint firstItem="yHC-qD-OlG" firstAttribute="centerY" secondItem="5g2-Hg-XTe" secondAttribute="centerY" id="e0j-ua-HMf"/>
                                         <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="yHC-qD-OlG" secondAttribute="trailing" id="vgo-SU-B7z"/>
                                     </constraints>
-                                    <connections>
-                                        <outlet property="label" destination="yHC-qD-OlG" id="NRC-g3-ehy"/>
-                                    </connections>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="label" destination="yHC-qD-OlG" id="U4g-zX-1CU"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -407,24 +408,34 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Locations" id="H3t-JC-kdi">
-                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="atZ-1m-794"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="5ce-j2-ItT"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="atZ-1m-794">
+                            <connections>
+                                <segue destination="GzE-bX-pfd" kind="push" id="ScB-wn-mRT"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="5ce-j2-ItT">
+                            <connections>
+                                <segue destination="ZcY-ez-kok" kind="unwind" unwindAction="unwindToRootViewControllerWithSegue:" id="Ws6-OM-Kwg"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YeI-ph-YFY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="ZcY-ez-kok" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1813.5999999999999" y="805.54722638680664"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Location-->
         <scene sceneID="KSK-mD-Tdz">
             <objects>
-                <viewController id="GzE-bX-pfd" sceneMemberID="viewController">
+                <viewController id="GzE-bX-pfd" customClass="AddLocationViewController" customModule="MagiSky" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gup-70-SVj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="PKk-qA-7zE"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Add Location" id="FTs-wH-eeY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gtm-qB-CaZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

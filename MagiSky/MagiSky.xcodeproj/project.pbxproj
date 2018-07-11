@@ -30,6 +30,7 @@
 		FA6C7AAF20F5B40900460D14 /* LocationRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C7AAE20F5B40900460D14 /* LocationRepresentable.swift */; };
 		FA6C7AB120F5B46A00460D14 /* LocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C7AB020F5B46A00460D14 /* LocationsViewModel.swift */; };
 		FA6C7AB320F5B4B300460D14 /* Extension+CLLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C7AB220F5B4B300460D14 /* Extension+CLLocation.swift */; };
+		FA6C7AB520F5BC4C00460D14 /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C7AB420F5BC4C00460D14 /* AddLocationViewController.swift */; };
 		FAACCCEC20EDA547001026CB /* Configurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAACCCEB20EDA547001026CB /* Configurations.swift */; };
 		FAACCCEF20EDA6E2001026CB /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAACCCEE20EDA6E2001026CB /* Location.swift */; };
 		FAACCCF120EDB13B001026CB /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAACCCF020EDB13B001026CB /* WeatherData.swift */; };
@@ -96,6 +97,7 @@
 		FA6C7AAE20F5B40900460D14 /* LocationRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRepresentable.swift; sourceTree = "<group>"; };
 		FA6C7AB020F5B46A00460D14 /* LocationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewModel.swift; sourceTree = "<group>"; };
 		FA6C7AB220F5B4B300460D14 /* Extension+CLLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+CLLocation.swift"; sourceTree = "<group>"; };
+		FA6C7AB420F5BC4C00460D14 /* AddLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
 		FAACCCEB20EDA547001026CB /* Configurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurations.swift; sourceTree = "<group>"; };
 		FAACCCEE20EDA6E2001026CB /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		FAACCCF020EDB13B001026CB /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
@@ -209,10 +211,10 @@
 		FA3E60F120EC662500E76227 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				FA6C7AA620F5B21E00460D14 /* LocationsViewController */,
-				FA6C7A9320F4C36600460D14 /* SettingsViewController */,
 				FACC1E7520EF33A100D65EFC /* RootViewController */,
 				FACC1E6E20EF2D0F00D65EFC /* WeartherViewControllers */,
+				FA6C7AA620F5B21E00460D14 /* LocationsViewController */,
+				FA6C7A9320F4C36600460D14 /* SettingsViewController */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -307,6 +309,7 @@
 		FA6C7AA620F5B21E00460D14 /* LocationsViewController */ = {
 			isa = PBXGroup;
 			children = (
+				FA6C7AB420F5BC4C00460D14 /* AddLocationViewController.swift */,
 				FA6C7AA720F5B24400460D14 /* LocationsViewController.swift */,
 				FA6C7AA920F5B26300460D14 /* Protocols */,
 				FA6C7AAA20F5B26E00460D14 /* ViewModels */,
@@ -557,6 +560,7 @@
 				FA6C7A9B20F4CAE600460D14 /* SettingsDateViewModel.swift in Sources */,
 				FA6C7AAF20F5B40900460D14 /* LocationRepresentable.swift in Sources */,
 				FACC1E6420EF110800D65EFC /* URLSessionDataTaskProtocol.swift in Sources */,
+				FA6C7AB520F5BC4C00460D14 /* AddLocationViewController.swift in Sources */,
 				FA6C7AA320F59B7200460D14 /* WeekWeatherDayViewModel.swift in Sources */,
 				FACC1E7920EF460E00D65EFC /* Extension+UIImage.swift in Sources */,
 				FACC1E7720EF45B500D65EFC /* CurrentWeatherViewModel.swift in Sources */,

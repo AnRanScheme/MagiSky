@@ -17,6 +17,7 @@ class RootViewController: UIViewController {
     private let segueCurrentWeather = "SegueCurrentWeather"
     private let segueWeekWeather = "SegueWeekWeather"
     private let segueSettings = "SegueSettings"
+    private let segueLocations = "SegueLocations"
     
     private lazy var locationManager: CLLocationManager = {
         let manager = CLLocationManager()
@@ -67,6 +68,20 @@ class RootViewController: UIViewController {
             }
             
             destination.delegate = self
+        case segueLocations:
+            guard let navigationController =
+                segue.destination as? UINavigationController else {
+                    fatalError("Invalid destination view controller!")
+            }
+            
+            guard let destination =
+                navigationController.topViewController as?
+                LocationsViewController else {
+                    fatalError("Invalid destination view controller!")
+            }
+            
+            destination.delegate = self
+            destination.currentLocation = currentLocation
         default:
             break
         }
@@ -168,6 +183,7 @@ extension RootViewController: CurrentWeatherViewControllerDelegate {
     
     func locationButtonPressed(controller: CurrentWeatherViewController) {
         print("Open locations.")
+        performSegue(withIdentifier: segueLocations, sender: self)
     }
     
     func settingsButtonPressed(controller: CurrentWeatherViewController) {
@@ -191,6 +207,13 @@ extension RootViewController: SettingsViewControllerDelegate {
     func controllerDidChangeTemperatureMode(
         controller: SettingsViewController) {
         reloadUI()
+    }
+}
+
+extension RootViewController: LocationsViewControllerDelegate {
+    func controller(_ controller: LocationsViewController,
+                    didSelectLocation location: CLLocation) {
+        currentLocation = location
     }
 }
 
