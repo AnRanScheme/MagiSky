@@ -65,13 +65,12 @@ extension WeekWeatherViewController: UITableViewDataSource {
                 for: indexPath) as? WeekWeatherTableViewCell else {
                     fatalError("Unexpected table view cell")
         }
-        
-        if let vm = viewModel {
-            cell.week.text = vm.week(for: indexPath.row)
-            cell.date.text = vm.date(for: indexPath.row)
-            cell.temperature.text = vm.temperature(for: indexPath.row)
-            cell.weatherIcon.image = vm.weatherIcon(for: indexPath.row)
-            cell.humid.text = vm.humidity(for: indexPath.row)
+        /* 面向协议编程
+        通常来讲就设计模式来讲 cell和view你应该持有ViewModel 和 model
+         我们可以通过面向协议编程使用protocol 来提供接口实现
+         */
+        if let vm = viewModel?.viewModel(for: indexPath.row) {
+            cell.configure(with: vm)
         }
         
         return cell

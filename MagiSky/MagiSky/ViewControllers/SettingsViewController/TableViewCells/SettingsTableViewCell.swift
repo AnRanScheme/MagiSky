@@ -18,4 +18,10 @@ class SettingsTableViewCell: UITableViewCell {
         super.awakeFromNib()
         selectionStyle = .none
     }
+    
+    // 使用协议
+    func configure(with vm: SettingsRepresentable) {
+        label.text = vm.labelText
+        accessoryType = vm.accessory
+    }
 }
