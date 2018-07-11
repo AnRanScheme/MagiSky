@@ -11,8 +11,10 @@
 
 ## 整理项目目录
 
-首先，还是创建一个*Single View Application*，这不过这次，记得把*Include Unit Tests*和*Include UI Tests*选上，在稍后的内容里，我们会涉及到单元测试以及UI测试的内容：![这是项目运行的git.png](https://upload-images.jianshu.io/upload_images/3410830-fd64227531619e9c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-以上是项目的架构![Untitled.gif](https://upload-images.jianshu.io/upload_images/3410830-06dea4bd9d10c37e.gif?imageMogr2/auto-orient/strip)
+首先，还是创建一个*Single View Application*，这不过这次，记得把*Include Unit Tests*和*Include UI Tests*选上，在稍后的内容里，我们会涉及到单元测试以及UI测试的内容.
+
+以上是项目的架构
+![Untitled.gif](https://upload-images.jianshu.io/upload_images/3410830-06dea4bd9d10c37e.gif?imageMogr2/auto-orient/strip)
 
 这是项目运行的git
 
