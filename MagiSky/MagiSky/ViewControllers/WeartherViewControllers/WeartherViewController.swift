@@ -16,11 +16,11 @@ class WeartherViewController: UIViewController {
     
     private func setupView() {
         weatherContainerView.isHidden = true
-        
         loadingFailedLabel.isHidden = true
         
         activityIndicatorView.startAnimating()
         activityIndicatorView.hidesWhenStopped = true
+        
     }
 
     override func viewDidLoad() {

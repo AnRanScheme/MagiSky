@@ -24,6 +24,7 @@ class CurrentWeatherViewController: WeartherViewController {
     @IBOutlet weak var humidityLabel: UILabel!
     @IBOutlet weak var summaryLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var btn: UIButton!
     
     /// weak修饰避免循环引用 当然只有类专属协议才可以被weak 修饰
     weak var delegate: CurrentWeatherViewControllerDelegate?
