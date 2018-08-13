@@ -485,14 +485,16 @@
 				TargetAttributes = {
 					FA3E60BD20EC655F00E76227 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 					FA3E60D120EC656100E76227 = {
 						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 0940;
+						LastSwiftMigration = 1000;
 						TestTargetID = FA3E60BD20EC655F00E76227;
 					};
 					FA3E60DC20EC656100E76227 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 						TestTargetID = FA3E60BD20EC655F00E76227;
 					};
 				};
@@ -768,7 +770,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.anran.MagiSky;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -786,7 +788,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.anran.MagiSky;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -808,7 +810,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cn.anran.MagiSkyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MagiSky.app/MagiSky";
 			};
@@ -830,7 +832,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.anran.MagiSkyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MagiSky.app/MagiSky";
 			};
@@ -850,7 +852,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.anran.MagiSkyUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = MagiSky;
 			};
@@ -870,7 +872,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.anran.MagiSkyUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = MagiSky;
 			};

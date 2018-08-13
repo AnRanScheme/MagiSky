@@ -139,7 +139,7 @@ extension LocationsViewController {
     }
     
     override func tableView(_ tableView: UITableView,
-                            commit editingStyle: UITableViewCellEditingStyle,
+                            commit editingStyle: UITableViewCell.EditingStyle,
                             forRowAt indexPath: IndexPath) {
         let location = favourites[indexPath.row]
         UserDefaults.removeLocation(location)
