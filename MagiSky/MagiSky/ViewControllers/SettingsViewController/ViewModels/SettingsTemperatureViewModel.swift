@@ -16,7 +16,7 @@ struct SettingsTemperatureViewModel {
         return temperatureMode == .celsius ? "Celsius" : "Fahrenhait"
     }
     
-    var accessory: UITableViewCell.AccessoryType {
+    var accessory: UITableViewCellAccessoryType {
         if UserDefaults.temperatureMode() == temperatureMode {
             return .checkmark
         }

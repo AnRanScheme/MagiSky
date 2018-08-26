@@ -14,7 +14,7 @@ struct SettingsDateViewModel {
         return dateMode == .text ? "Fri, 01 December" : "F, 12/01"
     }
     
-    var accessory: UITableViewCell.AccessoryType {
+    var accessory: UITableViewCellAccessoryType {
         if UserDefaults.dateMode() == dateMode {
             return .checkmark
         }

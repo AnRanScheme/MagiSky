@@ -97,7 +97,7 @@ class RootViewController: UIViewController {
             self,
             selector: #selector(
                 RootViewController.applicationDidBecomeActive(notification:)),
-            name: UIApplication.didBecomeActiveNotification,
+            name: Notification.Name.UIApplicationDidBecomeActive,
             object: nil)
     }
     

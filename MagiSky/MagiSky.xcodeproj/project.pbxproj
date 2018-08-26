@@ -170,7 +170,6 @@
 		FA3E60C020EC655F00E76227 /* MagiSky */ = {
 			isa = PBXGroup;
 			children = (
-				FA3E60F520EC662500E76227 /* Delegates */,
 				FACC1E6520EF112200D65EFC /* Extensions */,
 				FACC1E6020EF090300D65EFC /* Protocols */,
 				FAACCCF220EDB4C2001026CB /* Manager */,
@@ -180,6 +179,7 @@
 				FA3E60F720EC662500E76227 /* Storyboards */,
 				FA3E60F320EC662500E76227 /* Resources */,
 				FA3E60EF20EC662500E76227 /* SupportingFiles */,
+				FA3E60F520EC662500E76227 /* Delegates */,
 			);
 			path = MagiSky;
 			sourceTree = "<group>";

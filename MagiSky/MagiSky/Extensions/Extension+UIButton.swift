@@ -21,7 +21,7 @@ extension UIButton {
         return image!
     }
     
-    func setBackgroundColor(_ color: UIColor, forUIControlState state: UIControl.State) {
+    func setBackgroundColor(_ color: UIColor, forUIControlState state: UIControlState) {
         self.setBackgroundImage(imageWithColor(color), for: state)
     }
     
