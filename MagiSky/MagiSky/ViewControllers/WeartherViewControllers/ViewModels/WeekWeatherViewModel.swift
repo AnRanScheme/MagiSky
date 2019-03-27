@@ -32,3 +32,4 @@ struct WeekWeatherViewModel {
     }
     
 }
+
